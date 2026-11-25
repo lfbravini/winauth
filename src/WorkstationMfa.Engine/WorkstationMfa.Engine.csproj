@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>WorkstationMfa.Engine</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WorkstationMfa.Core\WorkstationMfa.Core.csproj" />
+    <ProjectReference Include="..\WorkstationMfa.PrivacyIdea\WorkstationMfa.PrivacyIdea.csproj" />
+    <ProjectReference Include="..\WorkstationMfa.Profiles\WorkstationMfa.Profiles.csproj" />
+    <ProjectReference Include="..\WorkstationMfa.Horizon\WorkstationMfa.Horizon.csproj" />
+  </ItemGroup>
+</Project>

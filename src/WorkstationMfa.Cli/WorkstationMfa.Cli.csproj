@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>WorkstationMfa.Cli</AssemblyName>
+    <RootNamespace>WorkstationMfa.Cli</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WorkstationMfa.Core\WorkstationMfa.Core.csproj" />
+    <ProjectReference Include="..\WorkstationMfa.Profiles\WorkstationMfa.Profiles.csproj" />
+    <ProjectReference Include="..\WorkstationMfa.Engine\WorkstationMfa.Engine.csproj" />
+    <ProjectReference Include="..\WorkstationMfa.PrivacyIdea\WorkstationMfa.PrivacyIdea.csproj" />
+    <ProjectReference Include="..\WorkstationMfa.Horizon\WorkstationMfa.Horizon.csproj" />
+  </ItemGroup>
+</Project>

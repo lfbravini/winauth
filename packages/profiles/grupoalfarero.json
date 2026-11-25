@@ -1,0 +1,14 @@
+{
+  "id": "grupoalfarero",
+  "displayName": "Grupo Alfarero",
+  "privacyIdeaBaseUrl": "https://mfa.corptronics.com",
+  "realm": "grupoalfarero.net",
+  "validateTls": true,
+  "horizonBroker": "192.168.253.236",
+  "horizonMediaRelativePath": "packages/horizon/VMware-Horizon-Client-2309-8.11.0-22660907.exe",
+  "totp": {
+    "digits": 6,
+    "hash": "sha1",
+    "period": 30
+  }
+}

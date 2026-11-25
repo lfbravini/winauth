@@ -1,0 +1,53 @@
+﻿<Window x:Class="WorkstationMfa.Console.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Workstation MFA Console"
+        Height="720" Width="1100"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource BgBrush}">
+  <DockPanel Margin="16">
+    <Border DockPanel.Dock="Top" Background="{StaticResource CardBrush}" Padding="12" Margin="0,0,0,12">
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+          <TextBlock x:Name="HeaderText" FontSize="18" FontWeight="SemiBold"/>
+          <TextBlock x:Name="SessionText" Foreground="Gray" Margin="0,4,0,0"/>
+          <TextBlock x:Name="LocalStatusText" Margin="0,4,0,0"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+          <Button Content="Refresh" Click="Refresh_Click"/>
+          <Button Content="Install Horizon" Click="InstallHorizon_Click" Background="#374151"/>
+          <Button Content="Sign out" Click="SignOut_Click" Background="#6B7280"/>
+        </StackPanel>
+      </Grid>
+    </Border>
+
+    <Border DockPanel.Dock="Bottom" Background="{StaticResource CardBrush}" Padding="12" Margin="0,12,0,0">
+      <DockPanel>
+        <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
+          <Button Content="Provision / Replace" Click="Provision_Click"/>
+          <Button Content="Revoke" Click="Revoke_Click" Background="#B91C1C"/>
+        </StackPanel>
+        <TextBlock x:Name="ActionStatusText" TextWrapping="Wrap" VerticalAlignment="Center"/>
+      </DockPanel>
+    </Border>
+
+    <DataGrid x:Name="UsersGrid"
+              AutoGenerateColumns="False"
+              IsReadOnly="True"
+              SelectionMode="Single"
+              HeadersVisibility="Column"
+              CanUserAddRows="False"
+              Background="White">
+      <DataGrid.Columns>
+        <DataGridTextColumn Header="User" Binding="{Binding Username}" Width="180"/>
+        <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="140"/>
+        <DataGridTextColumn Header="Tokens" Binding="{Binding TokenSummary}" Width="220"/>
+        <DataGridTextColumn Header="Name" Binding="{Binding DisplayName}" Width="*"/>
+      </DataGrid.Columns>
+    </DataGrid>
+  </DockPanel>
+</Window>
